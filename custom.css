@@ -1,0 +1,189 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #dcdcdc;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  background-color: #4f4f4f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.sidebar i {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.dashboard-header {
+  background-color: #4f4f4f;
+  color: #dcdcdc;
+  padding: 15px;
+}
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.status-online {
+  padding: 3px;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+.status-offline {
+  color: red;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+.temperature-bar, .humidity-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.temperature-fill, .humidity-fill {
+  height: 100%;
+  background-color: #00bfff;
+  border-radius: 10px;
+}
+.switch-label {
+  font-size: 1rem;
+}
+.horizontal-layout {
+    display: flex;
+    gap: 100px;
+      color: white;
+}
+
+.hover-text {
+    font-size: 18px;
+    color: black; /* Default color */
+    transition: color 0.3s ease;
+}
+
+/* Change text color on hover */
+.hover-text:hover {
+    color: #e0e0e0;
+    border-radius: 10px;
+    background-color: rgb(6, 81, 16); /* Change color on hover */
+    padding: 3px;
+
+}
+
+.dashboard-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Space between sections */
+  }
+
+  /* Temperature and Humidity Bar Styling */
+  .temperature-bar, .humidity-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .temperature-fill {
+    background-color: #00bfff; /* Blue color for temperature */
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .humidity-fill {
+    background-color: #00bfff; /* Blue color for humidity */
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  /* Switches Styling */
+  .switches {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+  }
+
+  .form-check-label {
+    margin-left: 10px;
+  }
+
+
+  .switch-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Hide the actual checkbox */
+  .form-check-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  /* Switch style */
+  .switch-label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+
+  .switch-label input:checked + .slider {
+    background-color: #28a745; /* Color when checked */
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+
+  /* Move the switch handle to the right when checked */
+  .form-check-input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+
+  /* Optional styling for the text label */
+  .text-label {
+    font-size: 16px;
+  }
